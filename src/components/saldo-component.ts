@@ -19,7 +19,9 @@ renderizarSaldo();
 
 export function renderizarSaldo(): void {
   if (elementoSaldo != null) {
-    elementoSaldo.textContent = formatarMoeda(Conta.getSaldo());
+    elementoSaldo.textContent = formatarMoeda(
+      parseFloat(Conta.getSaldo().toString())
+    );
   }
 }
 
